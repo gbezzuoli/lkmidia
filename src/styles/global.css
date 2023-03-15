@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+@keyframes orbit1 {
+    from {
+      transform: rotate(0) translateX(250px) rotate(0);
+    }
+    to {
+      transform: rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes orbit2 {
+    from {
+      transform: rotate(-120deg) translateX(250px) rotate(-120deg);
+    }
+    to {
+      transform: rotate(240deg) translateX(250px) rotate(-480deg);
+    }
+  }
+  
+  @keyframes orbit3 {
+    
+    from {
+      transform: rotate(-240deg) translateX(250px) rotate(-240deg);
+    }
+    to {
+      transform: rotate(120deg) translateX(250px) rotate(-600deg);
+    }
+  }
+  
+  .orbit1 {
+    animation: orbit1 12s linear infinite;
+  }
+  
+  .orbit2 {
+    transform: rotate(-90deg);
+    animation: orbit2 12s linear infinite;
+  }
+  
+  .orbit3 {
+    animation: orbit3 12s linear infinite;
+  }
+  
