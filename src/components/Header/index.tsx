@@ -7,7 +7,7 @@ import python from "@/assets/python.png";
 
 export const Header = () => {
   return (
-    <header className=" bg-[#2D2E32] px-8">
+    <header className=" bg-neutral-800 px-8">
       <Nav />
       <div className="flex flex-row max-w-6xl m-auto mt-8">
         <div className="flex flex-1 flex-col justify-between py-6">
@@ -23,7 +23,10 @@ export const Header = () => {
               escaláveis e com código limpo sempre com foco na entrega de valor
               para o negócio
             </p>
-            <a className="mt-8 text-green-400 underline cursor-pointer font-tech">
+            <a
+              href="https://wa.me/5511964780550"
+              className="mt-8 text-green-400 underline cursor-pointer font-tech"
+            >
               FALE COMIGO!
             </a>
           </section>
@@ -46,19 +49,19 @@ export const Header = () => {
           <Image
             src={me}
             alt="Henrique"
-            className="z-10 rounded-full h-[500px] w-[500px] border-2 border-green-400"
+            className="z-10 rounded-full h-[500px] w-[500px] border-2 border-green-400 object-cover"
           />
-          <div className="orbit1 absolute flex items-center justify-center h-24 w-24 z-50 bg-neutral-800 rounded-full m-auto">
+          <div className="orbit1 absolute flex items-center justify-center h-24 w-24 z-50 bg-[#141414] rounded-full m-auto">
             <Image src={react} alt="React icon" className=" h-[60%] w-fit" />
           </div>
-          <div className="orbit2 absolute flex items-center justify-center h-24 w-24 z-50 bg-neutral-800 rounded-full m-auto">
+          <div className="orbit2 absolute flex items-center justify-center h-24 w-24 z-50 bg-[#141414] rounded-full m-auto">
             <Image
               src={node}
               alt="Node Icon"
               className="rotate-[-120deg] h-[60%] w-fit"
             />
           </div>
-          <div className="orbit3 absolute flex items-center justify-center h-24 w-24 z-50 bg-neutral-800 rounded-full m-auto">
+          <div className="orbit3 absolute flex items-center justify-center h-24 w-24 z-50 bg-[#141414] rounded-full m-auto">
             <Image
               src={python}
               alt="Python icon"
