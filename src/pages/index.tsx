@@ -1,10 +1,17 @@
-import { Header } from "@/components/Header";
-
-import { SkillCard } from "@/components/SkillCard";
-import { Brain, Code, Monitor } from "@phosphor-icons/react";
 import Head from "next/head";
+import {
+  Brain,
+  Code,
+  GithubLogo,
+  LinkedinLogo,
+  Monitor,
+  TwitterLogo,
+} from "@phosphor-icons/react";
 
+import { Header } from "@/components/Header";
+import { SkillCard } from "@/components/SkillCard";
 import { Testimonials } from "@/components/Testimonials";
+import { SocialMediaButton } from "@/components/Header/Nav/SocialMediaButtton";
 
 export default function Home() {
   return (
@@ -15,7 +22,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header />
-      <main className="overflow-auto py-40 flex flex-col">
+      <main className="overflow-auto pt-40 flex flex-col">
         <div className="flex max-w-6xl m-auto">
           <div className="flex flex-1 flex-col gap-4">
             <SkillCard
@@ -52,9 +59,65 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <section className="flex flex-col max-w-6xl w-full m-auto mt-16">
-          <Testimonials />
-        </section>
+        {/* <section className="flex flex-col max-w-6xl w-full m-auto mt-16">
+            <Testimonials />
+          </section> */}
+        <footer className="flex flex-col w-full bg-neutral-800 px-8 mt-20">
+          <div className="flex flex-row w-full max-w-6xl m-auto py-20 justify-between">
+            <div className="flex flex-col w-1/2">
+              <article>
+                <h1 className="text-4xl font-tech">
+                  Vamos construir algo incrível juntos.
+                </h1>
+                <h2 className="text-4xl mt-16">
+                  Comece{" "}
+                  <a
+                    href="https://wa.me/5511964780550"
+                    className="mt-8 text-green-400 underline cursor-pointer"
+                  >
+                    dizendo olá!
+                  </a>
+                </h2>
+              </article>
+              <article className="flex justify-between mt-40 items-baseline">
+                <h1 className="text-2xl">
+                  Henrique <span className="text-neutral-400">Carvalho</span>
+                </h1>
+                <span className="text-neutral-500">
+                  &#169; {new Date().getFullYear()}. Todos o direitos reservados
+                </span>
+              </article>
+            </div>
+            <div className="flex flex-col w-1/4 justify-between">
+              <article className="flex flex-col">
+                <h3 className="text-neutral-500">Informação</h3>
+                <h2 className="text-neutral-500 text-xl mt-10">
+                  Franco da Rocha, SP - Brasil
+                </h2>
+                <span className="text-4xl font-tech mt-2">
+                  heenriquecds@gmail.com
+                </span>
+              </article>
+              <article className="flex space-x-2">
+                <SocialMediaButton
+                  icon={<GithubLogo />}
+                  alt=""
+                  href="https://github.com/HeenriqueCDS"
+                />
+                <SocialMediaButton
+                  icon={<LinkedinLogo />}
+                  alt=""
+                  href="https://www.linkedin.com/in/henriquecds"
+                />
+                <SocialMediaButton
+                  icon={<TwitterLogo />}
+                  alt=""
+                  href="https://twitter.com/henriquecdsx"
+                />
+              </article>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   );

@@ -40,8 +40,8 @@ export const Header = () => {
               </p>
             </article>
             <article className="flex flex-row items-center">
-              <span className="text-4xl mr-4 font-medium">36</span>
-              <p className="text-neutral-500"> REPOS</p>
+              <span className="text-4xl mr-4 font-medium">+10</span>
+              <p className="text-neutral-500">CERFITICAÇÕES</p>
             </article>
           </div>
         </div>
