@@ -15,9 +15,9 @@ export const Drawer = ({ isOpen, onClose }: DrawerProps) => {
   return (
     <nav
       ref={ref}
-      className={`left-0 transition-all ${
-        !isOpen && "-left-80 \n"
-      } \n flex lg:hidden fixed flex-col h-screen max-h-full overflow-hidden w-80 max-w-screen bg-neutral-800 z-50 shadow-md p-8`}
+      className={`transition-all ${
+        isOpen ? " left-0 " : " -left-80 "
+      } flex lg:hidden fixed flex-col h-screen max-h-full overflow-hidden w-80 max-w-screen bg-neutral-800 z-50 shadow-md p-8`}
     >
       <button
         className="transition-all text-xl absolute cursor-pointer right-2 top-2 hover:text-red-400"
