@@ -1,72 +1,64 @@
-import Image from "next/image";
-import { Nav } from "./Nav";
-import me from "@/assets/me.jpg";
-import react from "@/assets/react.png";
-import node from "@/assets/nodejs.png";
-import python from "@/assets/python.png";
+import { useDrawerHandler } from "@/contexts/DrawerContext";
+import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
+import { NavItem } from "./Nav/NavItem";
+import { SocialMediaButton } from "./Nav/SocialMediaButtton";
 
 export const Header = () => {
+  const { onOpen } = useDrawerHandler();
   return (
-    <header className=" bg-neutral-800 px-8">
-      <Nav />
-      <div className="flex flex-row max-w-6xl m-auto mt-8">
-        <div className="flex flex-1 flex-col justify-between py-6">
-          <section className="flex flex-col ml-auto w-80 gap-4">
-            <span className="bg-green-400 w-fit p-1 rounded text-neutral-800">
-              Fullstack Software Engineer
-            </span>
-            <h1 className="font-tech text-4xl">
-              Falar é fácil, me mostre o código
+    <header aria-label="Site Header" className="shadow-sm bg-neutral-800">
+      <div className="mx-auto max-w-6xl py-4 bg-neutral-800">
+        <div className="flex items-center justify-between gap-4 lg:gap-10">
+          <div className="flex lg:w-0 lg:flex-1">
+            <h1 className="text-blue-50 text-3xl ">
+              <span className="font-bold">Henrique</span> Carvalho
             </h1>
-            <p className="font-tech text-neutral-500">
-              Programo desde os 12 anos de idade, desenvolvo aplicações
-              escaláveis e com código limpo sempre com foco na entrega de valor
-              para o negócio
-            </p>
-            <a
-              href="https://wa.me/5511964780550"
-              className="mt-8 text-green-400 underline cursor-pointer font-tech"
+          </div>
+          <nav
+            aria-label="Site Nav"
+            className="hidden gap-8 text-sm font-medium lg:flex"
+          >
+            <NavItem href="/" pageName="Início" />
+            <NavItem href="/projects" pageName="Projetos" />
+            <NavItem href="/about-me" pageName="Biografia" />
+          </nav>
+
+          <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
+            <SocialMediaButton
+              href="https://github.com/heenriquecds"
+              icon={<AiOutlineGithub />}
+              alt="GitHub"
+            />
+            <SocialMediaButton
+              icon={<AiFillLinkedin className="text-[#0071B2]" />}
+              alt="LinkedIn"
+              href="https://www.linkedin.com/in/henriquecds"
+            />
+          </div>
+
+          <div className="lg:hidden">
+            <button
+              className="rounded-lg bg-green-400 p-2 text-neutral-800 cursor-pointer"
+              type="button"
+              onClick={() => onOpen()}
             >
-              FALE COMIGO!
-            </a>
-          </section>
-          <div className="flex flex-row mt-32 space-x-10 font-tech">
-            <article className="flex flex-row items-center">
-              <span className="text-4xl mr-4 font-medium">02</span>
-              <p className="text-neutral-500">
-                ANOS DE
-                <br />
-                EXPERIÊNCIA
-              </p>
-            </article>
-            <article className="flex flex-row items-center">
-              <span className="text-4xl mr-4 font-medium">+10</span>
-              <p className="text-neutral-500">CERFITICAÇÕES</p>
-            </article>
-          </div>
-        </div>
-        <div className="flex flex-1 relative items-center justify-center">
-          <Image
-            src={me}
-            alt="Henrique"
-            className="z-10 rounded-full h-[500px] w-[500px] border-2 border-green-400 object-cover"
-          />
-          <div className="orbit1 absolute flex items-center justify-center h-24 w-24 z-50 bg-[#141414] rounded-full m-auto">
-            <Image src={react} alt="React icon" className=" h-[60%] w-fit" />
-          </div>
-          <div className="orbit2 absolute flex items-center justify-center h-24 w-24 z-50 bg-[#141414] rounded-full m-auto">
-            <Image
-              src={node}
-              alt="Node Icon"
-              className="rotate-[-120deg] h-[60%] w-fit"
-            />
-          </div>
-          <div className="orbit3 absolute flex items-center justify-center h-24 w-24 z-50 bg-[#141414] rounded-full m-auto">
-            <Image
-              src={python}
-              alt="Python icon"
-              className="rotate-[-240deg]  h-[60%] w-fit"
-            />
+              <span className="sr-only">Open menu</span>
+              <svg
+                aria-hidden="true"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
