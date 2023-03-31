@@ -1,5 +1,6 @@
 import { X } from "@phosphor-icons/react";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 import { useOnClickOutside } from "usehooks-ts";
 import { NavItem } from "../Header/Nav/NavItem";
@@ -10,6 +11,7 @@ interface DrawerProps {
   onClose: () => void;
 }
 export const Drawer = ({ isOpen, onClose }: DrawerProps) => {
+  const { i18n } = useTranslation();
   const ref = useRef<HTMLElement>(null);
   useOnClickOutside(ref, () => onClose());
   return (
@@ -29,9 +31,15 @@ export const Drawer = ({ isOpen, onClose }: DrawerProps) => {
         <span className="font-bold">Henrique</span> Carvalho
       </h1>
       <div className="flex flex-col items-center space-y-2 mt-20">
-        <NavItem href="/" pageName="Início" />
-        <NavItem href="/projects" pageName="Projetos" />
-        <NavItem href="/about-me" pageName="Biografia" />
+        <NavItem href="/" pageName={i18n.t("commons.header.tabs.home")} />
+        <NavItem
+          href="/projects"
+          pageName={i18n.t("commons.header.tabs.projects")}
+        />
+        <NavItem
+          href="/about-me"
+          pageName={i18n.t("commons.header.tabs.about")}
+        />
       </div>
       <div className="flex flex-row mt-auto space-x-4">
         <SocialMediaButton

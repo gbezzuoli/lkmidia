@@ -1,29 +1,45 @@
 import { useDrawerHandler } from "@/contexts/DrawerContext";
+
+import { useTranslation } from "react-i18next";
+
 import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
+
+import { LanguageSwitch } from "../LanguageSwitch";
 import { NavItem } from "./Nav/NavItem";
 import { SocialMediaButton } from "./Nav/SocialMediaButtton";
 
 export const Header = () => {
+  const { i18n } = useTranslation();
   const { onOpen } = useDrawerHandler();
   return (
-    <header aria-label="Site Header" className="shadow-sm bg-neutral-800">
+    <header aria-label="Site Header" className="shadow-sm bg-neutral-800 px-4">
       <div className="mx-auto max-w-6xl py-4 bg-neutral-800">
         <div className="flex items-center justify-between gap-4 lg:gap-10">
-          <div className="flex lg:w-0 lg:flex-1">
-            <h1 className="text-blue-50 text-3xl ">
-              <span className="font-bold">Henrique</span> Carvalho
-            </h1>
-          </div>
+          <h1 className="flex flex-row space-x-2 text-blue-50 text-3xl ">
+            <span className="font-bold">
+              {i18n.t("commons.owner.firstName")}
+            </span>{" "}
+            <span className="hidden sm:flex">
+              {i18n.t("commons.owner.lastName")}
+            </span>
+          </h1>
+
           <nav
             aria-label="Site Nav"
             className="hidden gap-8 text-sm font-medium lg:flex"
           >
-            <NavItem href="/" pageName="Início" />
-            <NavItem href="/projects" pageName="Projetos" />
-            <NavItem href="/about-me" pageName="Biografia" />
+            <NavItem href="/" pageName={i18n.t("commons.header.tabs.home")} />
+            <NavItem
+              href="/projects"
+              pageName={i18n.t("commons.header.tabs.projects")}
+            />
+            <NavItem
+              href="/about-me"
+              pageName={i18n.t("commons.header.tabs.about")}
+            />
           </nav>
 
-          <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
+          <div className="hidden flex-1 items-center justify-end gap-4 lg:flex">
             <SocialMediaButton
               href="https://github.com/heenriquecds"
               icon={<AiOutlineGithub />}
@@ -36,9 +52,10 @@ export const Header = () => {
             />
           </div>
 
-          <div className="lg:hidden">
+          <div className="flex space-x-4">
+            <LanguageSwitch />
             <button
-              className="rounded-lg bg-green-400 p-2 text-neutral-800 cursor-pointer"
+              className="rounded-lg bg-green-400 p-2 text-neutral-800 cursor-pointer lg:hidden"
               type="button"
               onClick={() => onOpen()}
             >
@@ -53,9 +70,9 @@ export const Header = () => {
               >
                 <path
                   d="M4 6h16M4 12h16M4 18h16"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
               </svg>
             </button>

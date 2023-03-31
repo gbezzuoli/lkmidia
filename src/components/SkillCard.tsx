@@ -1,5 +1,6 @@
-import { cloneElement, ReactElement } from "react";
+import { cloneElement, ReactElement, useTransition } from "react";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 
 interface SkillCardProps {
   name: string;
@@ -9,6 +10,7 @@ interface SkillCardProps {
 
 export const SkillCard = ({ description, icon, name }: SkillCardProps) => {
   const router = useRouter();
+  const { i18n } = useTranslation();
 
   return (
     <section className="transition-all group hover:shadow-2xl   flex flex-col justify-between relative bg-neutral-800 h-48 p-8 rounded-lg w-full">
@@ -22,7 +24,7 @@ export const SkillCard = ({ description, icon, name }: SkillCardProps) => {
         className="font-tech underline cursor-pointer"
         onClick={() => router.push("/projects")}
       >
-        VER PROJETOS
+        {i18n.t("pages.main.projects")}
       </a>
       {cloneElement(icon, {
         className: "absolute top-8 right-8 text-green-300 text-3xl",
