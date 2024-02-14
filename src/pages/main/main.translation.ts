@@ -5,7 +5,7 @@ const ptBR = {
   letsChat: "FALE COMIGO!",
   yearsOf: "ANOS DE ",
   experience: "EXPERIÊNCIA",
-  projects: "CERTIFICAÇÕES",
+  projects: "PROJETOS",
   designThinkingDescription:
     "Pensamento crítico e criativo para resolver problemas.",
   frontEndDescription: "Desenvolvimento de interfaces web e mobile.",
@@ -29,7 +29,7 @@ const enUS = {
   letsChat: "LET'S CHAT!",
   yearsOf: "YEARS OF ",
   experience: "EXPERIENCE",
-  projects: "projects",
+  projects: "PROJECTS",
   designThinkingDescription:
     "Critical and creative thinking to solve problems.",
   frontEndDescription: "Development of web and mobile interfaces.",
