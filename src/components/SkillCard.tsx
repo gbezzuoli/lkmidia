@@ -1,5 +1,5 @@
-import { cloneElement, ReactElement, useTransition } from "react";
 import { useRouter } from "next/router";
+import { cloneElement, ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 
 interface SkillCardProps {
@@ -24,7 +24,7 @@ export const SkillCard = ({ description, icon, name }: SkillCardProps) => {
         className="font-tech underline cursor-pointer"
         onClick={() => router.push("/projects")}
       >
-        {i18n.t("pages.main.projects")}
+        {i18n.t("pages.main.seeProjects")}
       </a>
       {cloneElement(icon, {
         className: "absolute top-8 right-8 text-green-300 text-3xl",
