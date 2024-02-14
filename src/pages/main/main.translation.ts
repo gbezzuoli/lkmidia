@@ -5,13 +5,13 @@ const ptBR = {
   letsChat: "FALE COMIGO!",
   yearsOf: "ANOS DE ",
   experience: "EXPERIÊNCIA",
-  certificates: "CERTIFICAÇÕES",
+  projects: "CERTIFICAÇÕES",
   designThinkingDescription:
     "Pensamento crítico e criativo para resolver problemas.",
   frontEndDescription: "Desenvolvimento de interfaces web e mobile.",
   backEndDescription:
     "Desenvolvimento de aplicações web e mobile (APIs e integrações.)",
-  projects: "VER PROJETOS",
+  seeProjects: "VER PROJETOS",
   shortAboutMe: {
     title: "Introdução",
     heading: "Olá, meu nome é Henrique!",
@@ -29,13 +29,13 @@ const enUS = {
   letsChat: "LET'S CHAT!",
   yearsOf: "YEARS OF ",
   experience: "EXPERIENCE",
-  certificates: "CERTIFICATES",
+  projects: "projects",
   designThinkingDescription:
     "Critical and creative thinking to solve problems.",
   frontEndDescription: "Development of web and mobile interfaces.",
   backEndDescription:
     "Development of web and mobile applications (APIs and integrations).",
-  projects: "SEE PROJECTS",
+  seeProjects: "SEE PROJECTS",
   shortAboutMe: {
     title: "Introduction",
     heading: "Hello, my name is Henrique!",
@@ -46,4 +46,5 @@ const enUS = {
   },
 };
 
-export { ptBR, enUS };
+export { enUS, ptBR };
+
