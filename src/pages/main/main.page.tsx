@@ -41,9 +41,9 @@ export const MainPage = () => {
                 </p>
               </article>
               <article className="flex flex-row items-center">
-                <span className="text-4xl mr-4 font-medium">+10</span>
+                <span className="text-4xl mr-4 font-medium">+30</span>
                 <p className="text-neutral-500">
-                  {i18n.t("pages.main.certificates")}
+                  {i18n.t("pages.main.projects")}
                 </p>
               </article>
             </div>
