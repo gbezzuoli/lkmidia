@@ -1,10 +1,10 @@
-import Image from "next/image";
-import { SkillCard } from "@/components/SkillCard";
-import { Brain, Monitor, Code } from "@phosphor-icons/react";
 import me from "@/assets/me.jpg";
-import react from "@/assets/react.png";
 import node from "@/assets/nodejs.png";
 import python from "@/assets/python.png";
+import react from "@/assets/react.png";
+import { SkillCard } from "@/components/SkillCard";
+import { Brain, Code, Monitor } from "@phosphor-icons/react";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 export const MainPage = () => {
@@ -33,7 +33,7 @@ export const MainPage = () => {
             </section>
             <div className="flex flex-col sm:flex-row mt-32 space-y-8 sm:space-y-0 sm:space-x-10 font-tech">
               <article className="flex flex-row items-center">
-                <span className="text-4xl mr-4 font-medium">02</span>
+                <span className="text-4xl mr-4 font-medium">{new Date().getFullYear() - new Date('01/01/2021').getFullYear()}</span>
                 <p className="text-neutral-500">
                   {i18n.t("pages.main.yearsOf")}
                   <br />
