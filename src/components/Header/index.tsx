@@ -34,7 +34,7 @@ export const Header = () => {
               pageName={i18n.t("commons.header.tabs.projects")}
             />
             <NavItem
-              href="/about-me"
+              href="https://medium.com/@heenriquecds"
               pageName={i18n.t("commons.header.tabs.about")}
             />
           </nav>
