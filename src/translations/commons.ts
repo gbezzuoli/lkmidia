@@ -12,7 +12,7 @@ export const enUS = {
     tabs: {
       home: "Home",
       projects: "Projects",
-      about: "About",
+      about: "Articles",
     },
   },
   footer: {
@@ -42,7 +42,7 @@ export const ptBR = {
     tabs: {
       home: "Início",
       projects: "Projetos",
-      about: "Biografia",
+      about: "Artigos",
     },
   },
   footer: {
