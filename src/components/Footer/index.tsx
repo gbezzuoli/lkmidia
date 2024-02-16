@@ -2,8 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import {
   AiFillLinkedin,
-  AiOutlineGithub,
-  AiOutlineTwitter,
+  AiOutlineGithub
 } from "react-icons/ai";
 import { SocialMediaButton } from "../Header/Nav/SocialMediaButtton";
 
@@ -63,11 +62,11 @@ export const Footer = () => {
               alt=""
               href="https://www.linkedin.com/in/henriquecds"
             />
-            <SocialMediaButton
+            {/* <SocialMediaButton
               icon={<AiOutlineTwitter className="text-[#1A8CD8]" />}
               alt=""
               href="https://twitter.com/henriquecdsx"
-            />
+            /> */}
           </article>
         </div>
       </div>
