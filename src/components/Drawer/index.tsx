@@ -1,7 +1,7 @@
 import { X } from "@phosphor-icons/react";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
+import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { useOnClickOutside } from "usehooks-ts";
 import { NavItem } from "../Header/Nav/NavItem";
 import { SocialMediaButton } from "../Header/Nav/SocialMediaButtton";
@@ -37,7 +37,7 @@ export const Drawer = ({ isOpen, onClose }: DrawerProps) => {
           pageName={i18n.t("commons.header.tabs.projects")}
         />
         <NavItem
-          href="/about-me"
+          href="https://medium.com/@heenriquecds"
           pageName={i18n.t("commons.header.tabs.about")}
         />
       </div>
