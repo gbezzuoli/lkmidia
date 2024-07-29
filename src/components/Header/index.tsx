@@ -1,9 +1,6 @@
 import { useDrawerHandler } from "@/contexts/DrawerContext";
-
 import { useTranslation } from "react-i18next";
-
-import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
-
+import { AiFillLinkedin, AiOutlineGithub, AiOutlineGoogle, AiOutlineInstagram } from "react-icons/ai";
 import { LanguageSwitch } from "../LanguageSwitch";
 import { NavItem } from "./Nav/NavItem";
 import { SocialMediaButton } from "./Nav/SocialMediaButtton";
@@ -12,10 +9,10 @@ export const Header = () => {
   const { i18n } = useTranslation();
   const { onOpen } = useDrawerHandler();
   return (
-    <header aria-label="Site Header" className="shadow-sm bg-neutral-800 px-4">
-      <div className="mx-auto max-w-6xl py-4 bg-neutral-800">
+    <header aria-label="Site Header" className="shadow-sm bg-[#014513] px-4">
+      <div className="mx-auto max-w-6xl py-4 bg-[#014513]">
         <div className="flex items-center justify-between gap-4 lg:gap-10">
-          <h1 className="flex flex-row space-x-2 text-blue-50 text-3xl ">
+          <h1 className="flex flex-row space-x-2 text-[#e2b328] text-3xl ">
             <span className="font-bold">
               {i18n.t("commons.owner.firstName")}
             </span>{" "}
@@ -30,32 +27,32 @@ export const Header = () => {
           >
             <NavItem href="/" pageName={i18n.t("commons.header.tabs.home")} />
             <NavItem
-              href="/projects"
+              href="https://drive.google.com/drive/folders/1-pIj6Uw7s7Ajt72DGZhzMEZNTfHwI9Fm"
               pageName={i18n.t("commons.header.tabs.projects")}
             />
             <NavItem
-              href="https://medium.com/@heenriquecds"
+              href="https://drive.google.com/drive/folders/1-pIj6Uw7s7Ajt72DGZhzMEZNTfHwI9Fm"
               pageName={i18n.t("commons.header.tabs.about")}
             />
           </nav>
 
           <div className="hidden flex-1 items-center justify-end gap-4 lg:flex">
             <SocialMediaButton
-              href="https://github.com/heenriquecds"
-              icon={<AiOutlineGithub />}
-              alt="GitHub"
+              href="https://drive.google.com/drive/folders/1-pIj6Uw7s7Ajt72DGZhzMEZNTfHwI9Fm"
+              icon={<AiOutlineInstagram />}
+              alt="Instagram"
             />
             <SocialMediaButton
-              icon={<AiFillLinkedin className="text-[#0071B2]" />}
-              alt="LinkedIn"
-              href="https://www.linkedin.com/in/henriquecds"
+              icon={<AiOutlineGoogle className="text-[#e2b328]" />}
+              alt="Drive Portfolio"
+              href="https://drive.google.com/drive/folders/1-pIj6Uw7s7Ajt72DGZhzMEZNTfHwI9Fm"
             />
           </div>
 
           <div className="flex space-x-4">
             <LanguageSwitch />
             <button
-              className="rounded-lg bg-green-400 p-2 text-neutral-800 cursor-pointer lg:hidden"
+              className="rounded-lg bg-[#e2b328] p-2 text-[#014513] cursor-pointer lg:hidden"
               type="button"
               onClick={() => onOpen()}
             >

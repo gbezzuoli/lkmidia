@@ -5,8 +5,14 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Roboto", "sans-serif"],
-      tech: ["Share Tech Mono", "monospace"],
+      tech: ["Arial", "monospace"],
     },
+    backgroundColor: (theme) => ({
+      ...theme("colors"),
+      primary: "#3490dc",
+      secondary: "#ffed4a",
+      danger: "#e3342f",
+    }),
     extend: {},
   },
   plugins: [],

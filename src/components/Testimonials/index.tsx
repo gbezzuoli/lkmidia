@@ -1,3 +1,6 @@
+// NAO ESTA EM USO ESTA MERDA. NAO APAGAR PQ PODE SER UTIL NO FUTURO
+
+
 import me from "@/assets/me.jpg";
 import { Quotes } from "@phosphor-icons/react";
 import { TestimonialTab } from "./TestimonialTab";

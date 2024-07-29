@@ -13,7 +13,7 @@ export const NavItem = ({ pageName, href }: NavItemProps) => {
   const ActiveNavItem = () => {
     return (
       <a
-        className="w-28 text-base flex flex-row justify-center items-center transition-all text-green-400 cursor-default"
+        className="w-28 text-base flex flex-row justify-center items-center transition-all text-[#e2b328] cursor-default"
         onClick={() => router.push(href)}
       >
         <CaretLeft className="" />
@@ -26,7 +26,7 @@ export const NavItem = ({ pageName, href }: NavItemProps) => {
   const NavItem = () => {
     return (
       <a
-        className="text-neutral-50 w-28 text-base flex flex-row justify-center items-center transition-all cursor-pointer hover:brightness-110 hover:text-green-300"
+        className="text-neutral-50 w-28 text-base flex flex-row justify-center items-center transition-all cursor-pointer hover:brightness-110 hover:text-[#e2b328]	"
         onClick={() => router.push(href)}
       >
         {pageName}

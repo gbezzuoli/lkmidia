@@ -4,9 +4,9 @@ export const enUS = {
     enUS: "English",
   },
   owner: {
-    firstName: "Henrique",
-    lastName: "Carvalho",
-    title: "Fullstack Software Engineer",
+    firstName: "LK",
+    lastName: "Midia",
+    title: "Digital Media Agency",
   },
   header: {
     tabs: {
@@ -16,13 +16,13 @@ export const enUS = {
     },
   },
   footer: {
-    phrase: "Let's build something great together.",
+    phrase: "Let's create something amazing together.",
     startBy: "Start by ",
     sayingHi: "saying hi!",
     information: {
       title: "Information",
-      address: "Franco da Rocha, SP - Brazil",
-      email: "heenriquecds@gmail.com",
+      address: "Francisco Morato - SP, Brazil",
+      email: "lkconnectt777@gmail.com",
     },
     rights: "All rights reserved",
   },
@@ -34,9 +34,9 @@ export const ptBR = {
     enUS: "Inglês",
   },
   owner: {
-    firstName: "Henrique",
-    lastName: "Carvalho",
-    title: "Fullstack Software Engineer",
+    firstName: "LK",
+    lastName: "Midia",
+    title: "Agência de Mídia Digital",
   },
   header: {
     tabs: {
@@ -46,13 +46,13 @@ export const ptBR = {
     },
   },
   footer: {
-    phrase: "Vamos construir algo incrível juntos.",
+    phrase: "Vamos criar algo incrível juntos.",
     startBy: "Comece ",
     sayingHi: "dizendo olá!",
     information: {
       title: "Informações",
-      address: "Franco da Rocha, SP - Brasil",
-      email: "heenriquecds@gmail.com",
+      address: "Francisco Morato - SP, Brasil",
+      email: "lkconnectt777@gmail.com",
     },
     rights: "Todos os direitos reservados",
   },
